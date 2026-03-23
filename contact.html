@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sécurité des Données - Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">DataSecur</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="protections.html">Protections</a></li>
+                    <li class="nav-item"><a class="nav-link" href="vulnerabilites.html">Vulnérabilités</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cas-pratiques.html">Cas Pratiques</a></li>
+                    <li class="nav-item"><a class="nav-link" href="avenir.html">L'Avenir</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-secondary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Une question ?</h1>
+            <p class="lead">N'hésitez pas à me contacter pour échanger sur le sujet de la sécurité des données.</p>
+        </div>
+    </header>
+
+    <main class="container my-5 flex-grow-1">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-5">
+                        <h2 class="text-center mb-4">Formulaire de contact</h2>
+                        <p class="text-muted text-center mb-4">Pour m'envoyer un message, remplissez le formulaire ci-dessous. Cela ouvrira directement votre logiciel de messagerie par défaut.</p>
+                        
+                        <form action="mailto:delsinne9@gmail.com" method="post" enctype="text/plain">
+                            <div class="mb-3">
+                                <label for="nom" class="form-label fw-bold">Votre nom</label>
+                                <input type="text" class="form-control" id="nom" name="Nom" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="sujet" class="form-label fw-bold">Sujet de votre message</label>
+                                <input type="text" class="form-control" id="sujet" name="Sujet" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="form-label fw-bold">Votre question ou remarque</label>
+                                <textarea class="form-control" id="message" name="Message" rows="5" required></textarea>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-secondary btn-lg">Préparer l'e-mail</button>
+                            </div>
+                        </form>
+
+                        <hr class="my-4">
+                        <p class="text-center text-muted small">
+                            Si le formulaire ne fonctionne pas, vous pouvez écrire directement à l'adresse suivante :<br>
+                            <strong><a href="mailto:delsinne9@gmail.com" class="text-decoration-none text-secondary">delsinne9@gmail.com</a></strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container"><p class="mb-0">© 2026 - Projet d'information sur la sécurité des données.</p></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
