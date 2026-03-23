@@ -1,5 +1,33 @@
-lemincr.github.io/DataSecur/avenir.html
-lemincr.github.io/DataSecur/cas-pratiques.html
-lemincr.github.io/DataSecur/cantacts.html
-lemincr.github.io/DataSecur/protections.html
-lemincr.github.io/DataSecur/vulnerabilites.html
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://lemincr.github.io/DataSecur/index.html</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://lemincr.github.io/DataSecur/vulnerabilites.html</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://lemincr.github.io/DataSecur/protections.html</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://lemincr.github.io/DataSecur/cas-pratiques.html</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://lemincr.github.io/DataSecur/avenir.html</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://lemincr.github.io/DataSecur/cantacts.html</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.50</priority>
+  </url>
+</urlset>
