@@ -1,1 +1,3 @@
+User-agent: *
+Allow: /
 Sitemap: https://lemincr.github.io/DataSecur/sitemap.xml
