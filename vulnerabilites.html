@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sécurité des Données - Vulnérabilités</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root { --sober-dark: #1a202c; --sober-muted: #4a5568; --sober-light: #f7fafc; }
+        body { background-color: var(--sober-light); color: var(--sober-dark); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+        .navbar { background-color: var(--sober-dark) !important; }
+        .card-sober { border: none; border-top: 4px solid var(--sober-muted); background-color: white; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-sober:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important; }
+    </style>
 </head>
-<body class="bg-light d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="index.html">DataSecur</a>
+            <a class="navbar-brand fw-bold" href="index.html">DataSecur</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -25,45 +32,47 @@
         </div>
     </nav>
 
-    <header class="bg-danger text-white text-center py-5">
-        <div class="container">
+    <!-- Upgraded from bg-danger to bg-dark -->
+    <header class="bg-dark text-white text-center py-5">
+        <div class="container py-3">
             <h1 class="display-5 fw-bold">Les failles et les menaces</h1>
-            <p class="lead">Comprendre comment nos défenses sont contournées au quotidien.</p>
+            <p class="lead text-white-50">Comprendre comment nos défenses sont contournées au quotidien.</p>
         </div>
     </header>
 
     <main class="container my-5 flex-grow-1">
         <div class="row align-items-center mb-5">
             <div class="col-lg-6">
-                <img src="https://picsum.photos/600/400?random=3" alt="Piratage informatique" class="img-fluid rounded shadow">
+                <!-- Added grayscale filter -->
+                <img src="https://picsum.photos/600/400?grayscale&random=3" alt="Piratage informatique" class="img-fluid rounded shadow-lg">
             </div>
             <div class="col-lg-6 mt-4 mt-lg-0">
-                <h2 class="fw-bold text-danger">Le maillon faible : L'Humain</h2>
-                <p>Même le système informatique le plus sécurisé au monde devient vulnérable si la personne qui en détient la clé est manipulée. En cybersécurité, on estime que la vaste majorité des incidents impliquent une erreur humaine.</p>
-                <ul>
-                    <li class="mb-2"><strong>Mots de passe inadéquats :</strong> Malgré les avertissements, les suites comme "123456" ou les dates de naissance restent massivement utilisées. De plus, la réutilisation d'un même mot de passe sur plusieurs sites garantit qu'une seule fuite compromettra l'ensemble de vos comptes.</li>
-                    <li class="mb-2"><strong>Ingénierie sociale et Phishing :</strong> Les pirates ne cherchent plus forcément à casser les codes. Ils envoient des e-mails frauduleux (imitant les banques ou les impôts) pour pousser l'utilisateur à taper lui-même ses identifiants.</li>
-                    <li class="mb-2"><strong>Négligence matérielle :</strong> Ignorer les mises à jour logicielles de son téléphone ou se connecter à ses comptes bancaires depuis le Wi-Fi public et ouvert d'un aéroport sont des comportements à très haut risque.</li>
+                <h2 class="fw-bold mb-3">Le maillon faible : L'Humain</h2>
+                <p class="text-muted">Même le système informatique le plus sécurisé au monde devient vulnérable si la personne qui en détient la clé est manipulée. En cybersécurité, on estime que la vaste majorité des incidents impliquent une erreur humaine.</p>
+                <ul class="text-muted">
+                    <li class="mb-2"><strong>Mots de passe inadéquats :</strong> Les suites comme "123456" restent massivement utilisées, et la réutilisation compromet l'ensemble de vos comptes.</li>
+                    <li class="mb-2"><strong>Ingénierie sociale et Phishing :</strong> Les pirates envoient des e-mails frauduleux pour pousser l'utilisateur à taper lui-même ses identifiants.</li>
+                    <li class="mb-2"><strong>Négligence matérielle :</strong> Ignorer les mises à jour ou se connecter aux Wi-Fi publics sont des comportements à très haut risque.</li>
                 </ul>
             </div>
         </div>
         
         <div class="row g-4 mt-2">
             <div class="col-md-6">
-                <div class="card h-100 shadow-sm border-0 border-top border-danger border-4">
-                    <div class="card-body">
-                        <h3 class="card-title h5">Le modèle économique du "gratuit"</h3>
-                        <p class="mt-3">Un adage célèbre du net rappelle que "Si c'est gratuit, vous êtes le produit". Les réseaux sociaux, les moteurs de recherche et de nombreuses applications ne facturent rien à l'utilisateur, car leur véritable modèle économique repose sur la collecte massive de données.</p>
-                        <p>Ces informations (vos habitudes, vos clics, votre temps de lecture) sont agrégées pour créer des profils publicitaires ultra-précis. Ces profils sont souvent revendus ou partagés avec des courtiers en données (Data brokers), multipliant ainsi les acteurs détenant des informations sur vous et augmentant mécaniquement le risque de fuite.</p>
+                <div class="card card-sober h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <h3 class="card-title h5 fw-bold">Le modèle économique du "gratuit"</h3>
+                        <p class="mt-3 text-muted">Un adage célèbre du net rappelle que "Si c'est gratuit, vous êtes le produit". Les réseaux sociaux et de nombreuses applications ne facturent rien, car leur modèle repose sur la collecte massive de données.</p>
+                        <p class="text-muted">Ces informations sont agrégées pour créer des profils publicitaires ultra-précis, souvent revendus à des courtiers en données, augmentant mécaniquement le risque de fuite.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card h-100 shadow-sm border-0 border-top border-danger border-4">
-                    <div class="card-body">
-                        <h3 class="card-title h5">La cybercriminalité organisée</h3>
-                        <p class="mt-3">Le piratage n'est plus l'affaire d'individus isolés, mais d'une véritable industrie souterraine extrêmement lucrative.</p>
-                        <p>Les <strong>Ransomwares</strong> (rançongiciels) sont devenus le fléau des années 2020. Ils infiltrent le réseau d'une entreprise ou d'un hôpital, chiffrent la totalité des données pour les rendre inaccessibles, et exigent des millions de dollars pour fournir la clé de déchiffrement. Parallèlement, le vol de bases de données alimente un marché noir sur le Dark Web, où un dossier médical complet se monnaye à prix d'or.</p>
+                <div class="card card-sober h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <h3 class="card-title h5 fw-bold">La cybercriminalité organisée</h3>
+                        <p class="mt-3 text-muted">Le piratage n'est plus l'affaire d'individus isolés, mais d'une véritable industrie souterraine extrêmement lucrative.</p>
+                        <p class="text-muted">Les <strong>Ransomwares</strong> chiffrent la totalité des données pour les rendre inaccessibles et exigent des rançons. Parallèlement, le vol de bases de données alimente un marché noir sur le Dark Web.</p>
                     </div>
                 </div>
             </div>
@@ -71,7 +80,7 @@
     </main>
 
     <footer class="bg-dark text-white text-center py-4 mt-auto">
-        <div class="container"><p class="mb-0">© 2026 - Projet d'information sur la sécurité des données.</p></div>
+        <div class="container"><p class="mb-0 text-white-50">© 2026 - Projet d'information sur la sécurité des données.</p></div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
