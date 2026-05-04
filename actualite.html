@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sécurité des Données - Actualités & Décryptages</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root { --sober-dark: #1a202c; --sober-muted: #4a5568; --sober-light: #f7fafc; }
+        body { background-color: var(--sober-light); color: var(--sober-dark); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+        .navbar { background-color: var(--sober-dark) !important; }
+        
+        /* Editorial Styles */
+        .article-body { max-width: 850px; margin: 0 auto; }
+        .article-body p { font-size: 1.15rem; line-height: 1.8; color: #334155; margin-bottom: 1.5rem; }
+        .article-lead { font-size: 1.3rem !important; font-weight: 500; color: var(--sober-dark) !important; }
+        
+        /* News Specific Styles */
+        .news-card { background-color: white; border: none; border-top: 4px solid var(--sober-dark); box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 3rem; padding: 2.5rem; border-radius: 8px; }
+        .news-date { font-weight: bold; color: #dc3545; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 1rem; display: block; }
+        .commentary-box { background-color: #f1f5f9; border-left: 4px solid var(--sober-muted); padding: 1.5rem 2rem; margin-top: 2rem; border-radius: 0 8px 8px 0; }
+        .commentary-box h4 { color: var(--sober-dark); font-weight: bold; margin-bottom: 1rem; font-size: 1.2rem; }
+        .commentary-box p { font-size: 1.05rem; margin-bottom: 0; color: #475569; }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Pensez à ajouter le lien "Actualités" dans la navbar de vos autres pages -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-shield-lock-fill me-2"></i>DataSecur</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="protections.html">Protections</a></li>
+                    <li class="nav-item"><a class="nav-link" href="vulnerabilites.html">Vulnérabilités</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cas-pratiques.html">Cas Pratiques</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="actualites.html">Actualités</a></li>
+                    <li class="nav-item"><a class="nav-link" href="avenir.html">L'Avenir</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-dark text-white text-center py-5">
+        <div class="container py-4">
+            <h1 class="display-4 fw-bold">Actualités & Décryptages</h1>
+            <p class="lead text-white-50 mt-3 mx-auto" style="max-width: 700px;">Analyse à chaud des dernières cyberattaques majeures pour comprendre les failles de notre écosystème numérique en temps réel.</p>
+        </div>
+    </header>
+
+    <main class="container my-5 flex-grow-1">
+        <div class="article-body">
+            
+            <!-- Article 1 : Parcoursup -->
+            <article class="news-card">
+                <span class="news-date">Avril 2026</span>
+                <h2 class="fw-bold mb-4">Le piratage de Parcoursup : 705 000 candidats exposés</h2>
+                
+                <h5 class="fw-bold text-dark mt-4">Les faits :</h5>
+                <p>Le ministère de l'Enseignement supérieur a officialisé en avril 2026 une compromission majeure de la plateforme Parcoursup. Un compte interne disposant de droits d'extraction a été détourné par des pirates. Bilan : les données personnelles de <strong>705 000 candidats</strong> (principalement liés à la région Occitanie sur les sessions 2023 et 2025) ont été dérobées.</p>
+                <p>Les informations exfiltrées sont particulièrement sensibles : identité, adresse, numéro de téléphone, statut boursier, et l'historique des vœux d'orientation. Bien que l'intrusion initiale remonte à octobre 2025, elle n'a été détectée par les équipes du ministère qu'en mars 2026.</p>
+
+                <div class="commentary-box">
+                    <h4><i class="bi bi-search me-2"></i>Notre Décryptage</h4>
+                    <p>Ce piratage illustre le cauchemar de la <strong>"boucle de détection"</strong>. Le fait que les pirates aient pu séjourner dans le système pendant cinq mois sans déclencher la moindre alerte démontre une absence de surveillance des journaux d'activité (logs). En cybersécurité, un compte administrateur qui télécharge soudainement 700 000 fiches devrait bloquer le système automatiquement.<br><br>
+                    De plus, la nature des données volées (statut boursier, orientation) offre aux pirates un terreau parfait pour du <em>Spear Phishing</em> très ciblé. Des étudiants pourraient recevoir de faux e-mails ultra-réalistes promettant de fausses bourses d'études ou des admissions frauduleuses, visant à leur soutirer de l'argent ou des coordonnées bancaires.</p>
+                </div>
+            </article>
+
+            <!-- Article 2 : Plateformes Étudiantes (Cyclades) -->
+            <article class="news-card">
+                <span class="news-date">Juin 2025</span>
+                <h2 class="fw-bold mb-4">Cyberattaque Crous & Cyclades : 40 000 étudiants piratés en pleine période d'examens</h2>
+                
+                <h5 class="fw-bold text-dark mt-4">Les faits :</h5>
+                <p>À l'approche des résultats du baccalauréat et des examens universitaires, le groupe de hackers pro-russes "Stormous" a revendiqué la fuite des identifiants de plus de 40 000 étudiants français. Les pirates n'ont pas cassé l'infrastructure centrale, mais ont siphonné des comptes sur plusieurs portails (ÉduConnect, Cyclades, Mes Services Étudiant).</p>
+
+                <div class="commentary-box">
+                    <h4><i class="bi bi-search me-2"></i>Notre Décryptage</h4>
+                    <p>Cette attaque souligne la vulnérabilité liée à la <strong>fragmentation des services de l'État</strong> et à la <strong>fatigue des mots de passe</strong>. Les étudiants utilisent souvent le même mot de passe fragile pour se connecter au Crous, à Parcoursup et à Cyclades. Les pirates ont probablement utilisé la technique du "Credential Stuffing" : ils testent des listes de mots de passe volés ailleurs (sur des forums ou de vieux sites piratés) jusqu'à ce qu'un compte étudiant s'ouvre. La parade absolue à ce type d'attaque basique aurait été l'obligation d'activer l'Authentification Double Facteur (MFA) pour tous les comptes éducatifs.</p>
+                </div>
+            </article>
+
+            <!-- Article 3 : France Travail -->
+            <article class="news-card">
+                <span class="news-date">Mars 2024</span>
+                <h2 class="fw-bold mb-4">France Travail : Le pillage historique de 43 millions de profils</h2>
+                
+                <h5 class="fw-bold text-dark mt-4">Les faits :</h5>
+                <p>La plateforme France Travail (ex-Pôle Emploi) a subi ce qui est considéré comme l'une des plus vastes fuites de données de l'histoire du pays. En usurpant l'identité d'un conseiller "Cap Emploi" (un réseau partenaire légitime), des pirates ont pu se connecter à la base de données centrale.</p>
+                <p>Résultat : le vol des données d'identification de <strong>43 millions de personnes</strong>, incluant toutes les personnes inscrites (ou l'ayant été) sur les 20 dernières années. Numéros de Sécurité sociale, dates de naissance et adresses ont été compromis, bien que les mots de passe et RIB aient été épargnés.</p>
+
+                <div class="commentary-box">
+                    <h4><i class="bi bi-search me-2"></i>Notre Décryptage</h4>
+                    <p>C'est le cas d'école parfait de la <strong>"Supply Chain Attack" (Attaque par la chaîne logistique)</strong>. France Travail avait peut-être d'excellents pare-feux, mais les pirates ont compris qu'il était plus simple d'attaquer un partenaire externe (Cap Emploi) disposant d'un accès privilégié au réseau. <br><br>
+                    L'autre leçon majeure est le danger de la <strong>conservation excessive des données</strong>. Garder en ligne les données de personnes qui ne sont plus inscrites au chômage depuis 20 ans va à l'encontre du principe de "minimisation" imposé par le RGPD. Une donnée qui n'est plus utile doit être supprimée ; si elle n'existe plus, elle ne peut pas être volée.</p>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container text-center"><p class="mb-0 text-white-50">© 2026 - DataSecur. Projet d'information.</p></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
