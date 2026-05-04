@@ -10,10 +10,17 @@
         :root { --sober-dark: #1a202c; --sober-muted: #4a5568; --sober-light: #f7fafc; }
         body { background-color: var(--sober-light); color: var(--sober-dark); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
         .navbar { background-color: var(--sober-dark) !important; }
+        
+        /* Editorial Styles */
+        .article-body { max-width: 850px; margin: 0 auto; }
+        .article-body p { font-size: 1.1rem; line-height: 1.8; color: #334155; margin-bottom: 1.5rem; }
+        .article-lead { font-size: 1.3rem !important; font-weight: 500; color: var(--sober-dark) !important; }
+        
         .nav-pills .nav-link.active { background-color: var(--sober-muted); color: white; }
         .nav-pills .nav-link { color: var(--sober-muted); font-weight: bold; }
         .accordion-button:not(.collapsed) { background-color: #e2e8f0; color: var(--sober-dark); box-shadow: none; }
         .accordion-button:focus { box-shadow: none; border-color: var(--sober-muted); }
+        .breach-stats { border-left: 3px solid var(--sober-dark); padding-left: 15px; margin-bottom: 20px; }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -36,102 +43,94 @@
     </nav>
 
     <header class="bg-dark text-white text-center py-5">
-        <div class="container py-3">
-            <h1 class="display-5 fw-bold">Quand la sécurité cède</h1>
-            <p class="lead text-white-50">Analyse des fuites de données majeures et de leurs répercussions concrètes.</p>
+        <div class="container py-4">
+            <h1 class="display-4 fw-bold">Quand la forteresse cède</h1>
+            <p class="lead text-white-50 mt-3 mx-auto" style="max-width: 700px;">Une analyse documentaire des plus grandes fuites de données de l'histoire pour comprendre leurs mécanismes et leurs impacts réels sur la société.</p>
         </div>
     </header>
 
     <main class="container my-5 flex-grow-1">
-        <p class="lead text-center mb-5 text-muted mx-auto" style="max-width: 800px;">La théorie de la sécurité se heurte souvent à la dure réalité[cite: 4]. Les fuites de données frappent indistinctement les géants du web comme les entreprises spécialisées, rappelant qu'aucun système n'est infaillible[cite: 4].</p>
-        
-        <!-- Interactive Nav Pills -->
-        <ul class="nav nav-pills justify-content-center mb-4" id="pills-tab" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab">Toutes les affaires</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-social-tab" data-bs-toggle="pill" data-bs-target="#pills-social" type="button" role="tab">Réseaux Sociaux</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-iot-tab" data-bs-toggle="pill" data-bs-target="#pills-iot" type="button" role="tab">Objets Connectés (IoT)</button>
-          </li>
-        </ul>
-
-        <!-- Tab Content -->
-        <div class="tab-content" id="pills-tabContent">
-          <!-- ALL BREACHES TAB -->
-          <div class="tab-pane fade show active" id="pills-all" role="tabpanel">
-            <div class="accordion shadow-sm mb-5 border-0 rounded" id="accordionAll">
-                <!-- Yahoo -->
-                <div class="accordion-item border-0 border-bottom">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneAll">
-                            <i class="bi bi-envelope-x-fill me-3 text-danger"></i> L'Affaire Yahoo <span class="badge bg-secondary ms-2">2013-2014</span>
-                        </button>
-                    </h2>
-                    <div id="collapseOneAll" class="accordion-collapse collapse show" data-bs-parent="#accordionAll">
-                        <div class="accordion-body text-muted">
-                            <p>Près de <strong>3 milliards de comptes utilisateurs</strong> ont été compromis[cite: 4]. La méthode de chiffrement utilisée par Yahoo à l'époque était obsolète, permettant aux hackers de retrouver de nombreux mots de passe en clair[cite: 4].</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Cambridge Analytica -->
-                <div class="accordion-item border-0 border-bottom">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoAll">
-                            <i class="bi bi-facebook me-3 text-primary"></i> Scandale Cambridge Analytica <span class="badge bg-secondary ms-2">2018</span>
-                        </button>
-                    </h2>
-                    <div id="collapseTwoAll" class="accordion-collapse collapse" data-bs-parent="#accordionAll">
-                        <div class="accordion-body text-muted">
-                            <p>Les données de <strong>87 millions d'utilisateurs Facebook</strong> ont été récoltées via une application de test psychologique[cite: 4]. L'objectif ? Créer des profils extrêmement précis pour diffuser des publicités politiques ciblées[cite: 4].</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- VTech -->
-                <div class="accordion-item border-0">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeAll">
-                            <i class="bi bi-smartwatch me-3 text-success"></i> VTech (Jouets connectés) <span class="badge bg-secondary ms-2">2015</span>
-                        </button>
-                    </h2>
-                    <div id="collapseThreeAll" class="accordion-collapse collapse" data-bs-parent="#accordionAll">
-                        <div class="accordion-body text-muted">
-                            <p>La fuite a exposé les profils de <strong>plus de 6 millions d'enfants</strong> et de leurs parents[cite: 4]. Ce cas a mis en lumière une vulnérabilité souvent oubliée : l'Internet des Objets (IoT)[cite: 4].</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>
-          
-          <!-- Add other tabs similarly if desired, or let Bootstrap handle simple visibility -->
-          <!-- We are keeping it simple for demonstration -->
-          <div class="tab-pane fade" id="pills-social" role="tabpanel">
-             <p class="text-center text-muted">Filtré sur : Scandale Cambridge Analytica...</p>
-             <!-- Copy Cambridge Analytica Accordion here -->
-          </div>
-          <div class="tab-pane fade" id="pills-iot" role="tabpanel">
-             <p class="text-center text-muted">Filtré sur : VTech...</p>
-             <!-- Copy VTech Accordion here -->
-          </div>
-        </div>
-
-        <div class="alert bg-white border border-secondary border-opacity-25 mt-5 shadow-sm" role="alert">
-            <h4 class="alert-heading fw-bold"><i class="bi bi-exclamation-triangle-fill text-warning me-2"></i>Conséquences réelles</h4>
-            <hr class="text-muted">
-            <ul class="mb-0 text-muted">
-                <li><strong>Usurpation d'identité :</strong> Des criminels peuvent contracter des crédits en votre nom[cite: 4].</li>
-                <li><strong>Fraudes ciblées :</strong> E-mails de phishing personnalisés indiscernables de la réalité[cite: 4].</li>
-                <li><strong>Chantage :</strong> Publication de données sensibles pour soutirer de l'argent[cite: 4].</li>
+        <div class="article-body">
+            <p class="article-lead text-center mb-5">La théorie cryptographique se heurte souvent à la dure réalité des infrastructures vieillissantes ou des négligences humaines. Étudier les "Data Breaches" du passé est le meilleur moyen d'anticiper les failles de demain.</p>
+            
+            <ul class="nav nav-pills justify-content-center mb-4" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab">Dossiers Majeurs</button>
+              </li>
             </ul>
+
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-all" role="tabpanel">
+                <div class="accordion shadow-sm mb-5 border-0 rounded" id="accordionAll">
+                    
+                    <!-- Yahoo -->
+                    <div class="accordion-item border-0 border-bottom">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneAll">
+                                <i class="bi bi-database-fill-x me-3 text-danger"></i> L'Affaire Yahoo : Le désastre quantitatif
+                            </button>
+                        </h2>
+                        <div id="collapseOneAll" class="accordion-collapse collapse show" data-bs-parent="#accordionAll">
+                            <div class="accordion-body">
+                                <div class="breach-stats bg-light p-3 rounded mb-3">
+                                    <strong>Date :</strong> 2013 - 2014 (Révélé en 2016)<br>
+                                    <strong>Victimes :</strong> ~ 3 milliards de comptes (la totalité des utilisateurs)<br>
+                                    <strong>Données exposées :</strong> Noms, e-mails, téléphones, dates de naissance, mots de passe.
+                                </div>
+                                <p>C'est à ce jour la plus grande violation de données enregistrée dans l'histoire d'Internet. Le piratage a été perpétré par des hackers présumés affiliés à un État, cherchant initialement à cibler des journalistes et des dissidents politiques.</p>
+                                <p><strong>L'erreur fatale :</strong> Bien que les mots de passe aient été chiffrés, Yahoo utilisait une méthode de hachage (MD5) qui était déjà considérée comme obsolète et vulnérable par la communauté de la cybersécurité depuis des années. Les pirates ont pu utiliser des "Rainbow tables" (des dictionnaires de mots de passe pré-calculés) pour retrouver facilement les mots de passe en clair des utilisateurs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cambridge Analytica -->
+                    <div class="accordion-item border-0 border-bottom">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoAll">
+                                <i class="bi bi-people-fill me-3 text-primary"></i> Cambridge Analytica : L'arme psychologique
+                            </button>
+                        </h2>
+                        <div id="collapseTwoAll" class="accordion-collapse collapse" data-bs-parent="#accordionAll">
+                            <div class="accordion-body">
+                                <div class="breach-stats bg-light p-3 rounded mb-3">
+                                    <strong>Date :</strong> 2014 (Révélé en 2018)<br>
+                                    <strong>Victimes :</strong> 87 millions d'utilisateurs Facebook<br>
+                                    <strong>Données exposées :</strong> Likes, profils psychologiques, listes d'amis, messages privés pour certains.
+                                </div>
+                                <p>Contrairement à Yahoo, il n'y a pas eu de piratage technique. Le système a fonctionné exactement comme Facebook l'avait conçu à l'époque. Une application de test de personnalité ("This Is Your Digital Life") a demandé l'accès aux données des utilisateurs qui participaient au test... <strong>mais aussi aux données de tous leurs amis</strong>, sans le consentement explicite de ces derniers.</p>
+                                <p><strong>L'impact :</strong> Ces données ont été vendues au cabinet Cambridge Analytica, qui a utilisé le modèle psychologique OCEAN pour profiler les électeurs. Ils ont ensuite diffusé des publicités politiques sur-mesure (parfois de fausses informations) pour influencer des scrutins majeurs, notamment le Brexit et l'élection présidentielle américaine de 2016. Ce scandale a prouvé que la donnée n'est pas qu'un outil commercial, c'est une arme de manipulation de masse.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VTech -->
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeAll">
+                                <i class="bi bi-smartwatch me-3 text-success"></i> VTech : L'Internet des Objets non sécurisé
+                            </button>
+                        </h2>
+                        <div id="collapseThreeAll" class="accordion-collapse collapse" data-bs-parent="#accordionAll">
+                            <div class="accordion-body">
+                                <div class="breach-stats bg-light p-3 rounded mb-3">
+                                    <strong>Date :</strong> 2015<br>
+                                    <strong>Victimes :</strong> 6,3 millions d'enfants et 4,8 millions de parents<br>
+                                    <strong>Données exposées :</strong> Noms, genres, photos de profil, adresses postales, historiques de discussion.
+                                </div>
+                                <p>VTech, fabricant reconnu de jouets électroniques et de tablettes éducatives pour enfants, a subi une intrusion massive sur son portail "Learning Lodge". Un hacker a réussi à extraire la base de données entière via une simple faille d'injection SQL sur leur site web.</p>
+                                <p><strong>Le signal d'alarme :</strong> Ce cas a traumatisé l'industrie car il ciblait la population la plus vulnérable : les enfants. Il a mis en lumière l'extrême fragilité de l'Internet des Objets (IoT). Souvent, les caméras connectées, les montres intelligentes ou les jouets sont développés pour être mis sur le marché le plus vite possible, en sacrifiant totalement les protocoles de sécurité de base (données stockées en clair, mots de passe administrateur par défaut non modifiables).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
         </div>
     </main>
 
-    <footer class="bg-dark text-white text-center py-4 mt-auto">
-        <div class="container"><p class="mb-0 text-white-50">© 2026 - Projet d'information sur la sécurité des données.</p></div>
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container text-center"><p class="mb-0 text-white-50">© 2026 - DataSecur. Projet d'information.</p></div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
