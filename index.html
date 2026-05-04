@@ -6,69 +6,31 @@
     <title>Sécurité des Données - Accueil</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
-    <!-- Sober Theme Custom CSS -->
     <style>
-        :root {
-            --sober-dark: #1a202c; /* Deep slate */
-            --sober-muted: #4a5568; /* Steel gray */
-            --sober-light: #f7fafc; /* Very soft gray background */
-            --sober-accent: #2c3e50; /* Navy accent */
-        }
-        body {
-            background-color: var(--sober-light);
-            color: var(--sober-dark);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        }
-        .navbar {
-            background-color: var(--sober-dark) !important;
-        }
+        :root { --sober-dark: #1a202c; --sober-muted: #4a5568; --sober-light: #f7fafc; --sober-accent: #2c3e50; }
+        body { background-color: var(--sober-light); color: var(--sober-dark); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+        .navbar { background-color: var(--sober-dark) !important; }
         .hero-section {
-            /* Using a grayscale filter on the background image for a sober look */
             background: linear-gradient(rgba(26, 32, 44, 0.85), rgba(26, 32, 44, 0.85)), url('https://picsum.photos/1920/600?grayscale&random=1') no-repeat center center/cover;
             color: white;
-            position: relative;
         }
-        .btn-sober {
-            background-color: var(--sober-muted);
-            color: white;
-            border: none;
-            transition: background-color 0.3s ease;
-        }
-        .btn-sober:hover {
-            background-color: var(--sober-dark);
-            color: white;
-        }
-        .btn-outline-sober {
-            color: var(--sober-muted);
-            border-color: var(--sober-muted);
-            transition: all 0.3s ease;
-        }
-        .btn-outline-sober:hover {
-            background-color: var(--sober-muted);
-            color: white;
-        }
-        .card-sober {
-            border: none;
-            border-top: 4px solid var(--sober-muted);
-            background-color: white;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card-sober:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
-        }
-        .text-sober {
-            color: var(--sober-muted) !important;
-        }
+        .btn-sober { background-color: var(--sober-muted); color: white; border: none; transition: 0.3s; }
+        .btn-sober:hover { background-color: var(--sober-dark); color: white; }
+        .btn-outline-sober { color: var(--sober-muted); border-color: var(--sober-muted); transition: 0.3s; }
+        .btn-outline-sober:hover { background-color: var(--sober-muted); color: white; }
+        .card-sober { border: none; border-top: 4px solid var(--sober-muted); background-color: white; transition: transform 0.3s, box-shadow 0.3s; }
+        .card-sober:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important; }
+        .icon-large { font-size: 2.5rem; color: var(--sober-muted); margin-bottom: 15px; }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">DataSecur</a>
+            <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-shield-lock-fill me-2"></i>DataSecur</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -85,37 +47,39 @@
         </div>
     </nav>
 
-    <!-- Upgraded Sober Hero -->
     <header class="hero-section text-center py-5">
         <div class="container position-relative py-5">
-            <h1 class="display-4 fw-bold">Nos données en ligne sont-elles bel et bien sécurisées ?</h1>
-            <p class="lead mt-3 mx-auto" style="max-width: 800px;">Comprendre les enjeux de la vie privée à l'ère du numérique : une analyse entre protections avancées, vulnérabilités persistantes et nouveaux défis technologiques.</p>
-            <a href="#introduction" class="btn btn-light btn-lg mt-4 px-4 fw-bold shadow-sm">Plonger dans le sujet</a>
+            <h1 class="display-4 fw-bold">Vos données en ligne sont-elles sécurisées ?</h1>
+            <p class="lead mt-3 mx-auto" style="max-width: 800px;">Une analyse experte entre protections avancées, vulnérabilités persistantes et nouveaux défis technologiques.</p>
+            <div class="mt-4">
+                <a href="#introduction" class="btn btn-light btn-lg px-4 fw-bold shadow-sm me-2">Découvrir</a>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-light btn-lg px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#guideModal">
+                    Guide d'audit gratuit
+                </button>
+            </div>
         </div>
     </header>
 
     <main class="container my-5 flex-grow-1" id="introduction">
-        <!-- Introduction Section -->
         <div class="row align-items-center mb-5">
             <div class="col-md-6">
-                <h2 class="fw-bold mb-4">Le paradoxe du monde numérique</h2>
-                <p class="text-muted">Aujourd'hui, nous confions la quasi-totalité de notre vie au web. De nos comptes bancaires à nos dossiers médicaux, en passant par nos conversations intimes, notre géolocalisation et nos habitudes de consommation, notre identité numérique est le reflet exact de notre identité physique.</p>
-                <p class="text-muted">D'un côté, les technologies de protection n'ont jamais été aussi puissantes. Le chiffrement complexe et les protocoles stricts sont censés bâtir des forteresses infranchissables autour de nos informations.</p>
-                <p class="text-muted">De l'autre, les fuites de données massives, le vol d'identité et les piratages à grande échelle font régulièrement la une des journaux. Les entreprises multimilliardaires elles-mêmes se font régulièrement déjouer par des pirates informatiques. Ce paradoxe soulève une question fondamentale : sommes-nous vraiment en sécurité sur Internet, ou acceptons-nous aveuglément une illusion de contrôle ?</p>
+                <h2 class="fw-bold mb-4">Le paradoxe numérique</h2>
+                <p class="text-muted">Nous confions notre vie au web. De nos comptes bancaires à nos dossiers médicaux, notre identité numérique est le reflet de notre identité physique.</p>
+                <p class="text-muted">Malgré des technologies de chiffrement puissantes, les fuites de données massives font régulièrement la une. Sommes-nous vraiment en sécurité, ou acceptons-nous une illusion de contrôle ?</p>
             </div>
             <div class="col-md-6 text-center">
-                <!-- Added grayscale to image for sober aesthetic -->
-                <img src="https://picsum.photos/600/400?grayscale&random=2" alt="Sécurité informatique" class="img-fluid rounded shadow-lg">
+                <img src="https://picsum.photos/600/400?grayscale&random=2" alt="Sécurité" class="img-fluid rounded shadow-lg">
             </div>
         </div>
 
-        <!-- Upgraded Cards -->
         <div class="row text-center mt-5 g-4">
             <div class="col-md-4">
                 <div class="card card-sober h-100 shadow-sm">
                     <div class="card-body p-4">
-                        <h3 class="card-title h4 fw-bold text-dark">Les Protections</h3>
-                        <p class="card-text text-muted mt-3">Découvrez ce qui nous protège aujourd'hui au quotidien : la cryptographie de pointe, les cadres juridiques comme le RGPD, et les mesures défensives des géants du web.</p>
+                        <i class="bi bi-shield-check icon-large"></i>
+                        <h3 class="card-title h4 fw-bold text-dark">Protections</h3>
+                        <p class="card-text text-muted mt-3">Cryptographie, RGPD, et mesures défensives actuelles.</p>
                         <a href="protections.html" class="btn btn-outline-sober mt-2">Lire la suite</a>
                     </div>
                 </div>
@@ -123,8 +87,9 @@
             <div class="col-md-4">
                 <div class="card card-sober h-100 shadow-sm">
                     <div class="card-body p-4">
-                        <h3 class="card-title h4 fw-bold text-dark">Les Vulnérabilités</h3>
-                        <p class="card-text text-muted mt-3">Analysez les failles du système : l'erreur humaine toujours omniprésente, la cybercriminalité organisée et le modèle économique pernicieux des services gratuits.</p>
+                        <i class="bi bi-bug icon-large"></i>
+                        <h3 class="card-title h4 fw-bold text-dark">Vulnérabilités</h3>
+                        <p class="card-text text-muted mt-3">Erreur humaine, phishing et cybercriminalité organisée.</p>
                         <a href="vulnerabilites.html" class="btn btn-outline-sober mt-2">Lire la suite</a>
                     </div>
                 </div>
@@ -132,8 +97,9 @@
             <div class="col-md-4">
                 <div class="card card-sober h-100 shadow-sm">
                     <div class="card-body p-4">
+                        <i class="bi bi-cpu icon-large"></i>
                         <h3 class="card-title h4 fw-bold text-dark">L'Avenir</h3>
-                        <p class="card-text text-muted mt-3">Anticipez les défis de demain : la menace de l'ordinateur quantique, l'intelligence artificielle à double tranchant et l'espoir d'un Web3 décentralisé.</p>
+                        <p class="card-text text-muted mt-3">Ordinateur quantique, IA et Web3 décentralisé.</p>
                         <a href="avenir.html" class="btn btn-outline-sober mt-2">Lire la suite</a>
                     </div>
                 </div>
@@ -141,13 +107,37 @@
         </div>
     </main>
 
-    <footer class="bg-dark text-white text-center py-4 mt-auto">
-        <div class="container">
-            <p class="mb-0 text-white-50">© 2026 - Projet d'information sur la sécurité des données.</p>
+    <!-- Modal for CTA -->
+    <div class="modal fade" id="guideModal" tabindex="-1" aria-labelledby="guideModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h5 class="modal-title" id="guideModalLabel">Télécharger le guide d'audit</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-dark">
+            <p>Recevez notre checklist en 10 points pour sécuriser vos comptes personnels et professionnels immédiatement.</p>
+            <form>
+              <div class="mb-3">
+                <label for="emailInput" class="form-label">Adresse e-mail</label>
+                <input type="email" class="form-control" id="emailInput" placeholder="nom@exemple.com">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fermer</button>
+            <button type="button" class="btn btn-sober">Envoyer le lien</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container text-center">
+            <p class="mb-0 text-white-50">© 2026 - DataSecur. Projet d'information.</p>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
