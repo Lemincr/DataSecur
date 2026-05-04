@@ -10,9 +10,16 @@
         :root { --sober-dark: #1a202c; --sober-muted: #4a5568; --sober-light: #f7fafc; }
         body { background-color: var(--sober-light); color: var(--sober-dark); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
         .navbar { background-color: var(--sober-dark) !important; }
-        .card-sober { border: none; border-top: 4px solid var(--sober-muted); background-color: white; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .card-sober:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important; }
-        .popover-term { border-bottom: 1px dashed var(--sober-dark); cursor: pointer; font-weight: bold; color: var(--sober-dark); }
+        
+        /* Editorial Styles */
+        .article-body { max-width: 850px; margin: 0 auto; }
+        .article-body p { font-size: 1.15rem; line-height: 1.8; color: #334155; margin-bottom: 1.5rem; }
+        .article-lead { font-size: 1.3rem !important; font-weight: 500; color: var(--sober-dark) !important; }
+        .popover-term { border-bottom: 2px dashed var(--sober-dark); cursor: help; font-weight: bold; color: var(--sober-dark); transition: 0.2s; }
+        .popover-term:hover { background-color: #e2e8f0; }
+        
+        .future-icon { font-size: 3rem; color: var(--sober-muted); float: left; margin-right: 20px; margin-top: 5px; }
+        .clearfix::after { content: ""; clear: both; display: table; }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -35,46 +42,45 @@
     </nav>
 
     <header class="bg-dark text-white text-center py-5">
-        <div class="container py-3">
-            <h1 class="display-5 fw-bold">Les défis de demain</h1>
-            <p class="lead text-white-50">Vers de nouveaux paradigmes technologiques où tout est à réinventer.</p>
+        <div class="container py-4">
+            <h1 class="display-4 fw-bold">La prochaine guerre froide technologique</h1>
+            <p class="lead text-white-50 mt-3 mx-auto" style="max-width: 700px;">Alors que nous peinons à sécuriser le web actuel, de nouveaux paradigmes s'apprêtent à rendre obsolètes toutes nos certitudes.</p>
         </div>
     </header>
 
     <main class="container my-5 flex-grow-1">
-        <p class="text-center mb-5 lead text-muted mx-auto" style="max-width: 800px;">La sécurité informatique est une course perpétuelle entre le bouclier et l'épée[cite: 3]. Alors que nous peinons à sécuriser le web actuel, de nouvelles révolutions technologiques s'apprêtent à bouleverser entièrement la donne[cite: 3].</p>
+        <div class="article-body">
+            <p class="article-lead">La cybersécurité est soumise à la loi de la Reine Rouge d'Alice au pays des merveilles : "Il faut courir de toute sa vitesse rien que pour rester sur place". Les technologies de la prochaine décennie vont briser les règles du jeu, forçant les défenseurs à réinventer l'intégralité de l'écosystème numérique.</p>
+            
+            <div class="clearfix mt-5 mb-4">
+                <i class="bi bi-cpu-fill future-icon"></i>
+                <h2 class="fw-bold pt-2">L'Apocalypse Quantique ("Q-Day")</h2>
+            </div>
+            <p>Aujourd'hui, vos communications bancaires sont protégées par l'algorithme RSA. Celui-se repose sur un problème mathématique simple pour nous, mais impossible pour une machine : factoriser de très grands nombres premiers. Un ordinateur classique mettrait des milliards d'années à le résoudre.</p>
+            <p>L'ordinateur quantique, exploitant les lois de la physique subatomique, pourrait utiliser l'algorithme de Shor pour résoudre ce problème en quelques secondes. Le jour où un ordinateur quantique suffisamment stable verra le jour (le fameux "Q-Day"), <strong>l'intégralité du chiffrement mondial actuel deviendra caduc</strong>.</p>
+            <p>Le danger est tel que des pirates pratiquent déjà le "Store Now, Decrypt Later" (Stocker maintenant, déchiffrer plus tard) : ils volent des bases de données chiffrées aujourd'hui, qu'ils conservent précieusement en attendant d'avoir la technologie quantique pour les lire demain. En réponse, la communauté mondiale travaille d'arrache-pied sur la <span class="popover-term" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Cryptographie Post-Quantique (PQC)" data-bs-content="Nouvelles familles d'algorithmes mathématiques (souvent basées sur les réseaux euclidiens) conçues pour être insolubles même par des ordinateurs quantiques.">Cryptographie Post-Quantique</span>, une refonte totale de nos systèmes mathématiques.</p>
 
-        <div class="row g-4">
-            <div class="col-lg-4">
-                <div class="card card-sober h-100 shadow-sm p-4">
-                    <h3 class="h5 fw-bold"><i class="bi bi-cpu-fill text-muted me-2"></i>L'épée Quantique</h3>
-                    <p class="mt-3 text-muted">Un ordinateur quantique mature pourrait résoudre les algorithmes de chiffrement actuels en quelques secondes[cite: 3].</p>
-                    <p class="text-muted">Pour parer à cette menace, la <span class="popover-term" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Cryptographie Post-Quantique" data-bs-content="Nouvelles méthodes mathématiques en cours de développement, censées résister à la puissance de calcul phénoménale des futurs ordinateurs quantiques.">cryptographie post-quantique</span> est en plein développement[cite: 3].</p>
-                </div>
+            <div class="clearfix mt-5 mb-4">
+                <i class="bi bi-robot future-icon"></i>
+                <h2 class="fw-bold pt-2">L'Intelligence Artificielle générative</h2>
             </div>
-            <div class="col-lg-4">
-                <div class="card card-sober h-100 shadow-sm p-4">
-                    <h3 class="h5 fw-bold"><i class="bi bi-robot text-muted me-2"></i>L'Intelligence Artificielle</h3>
-                    <p class="mt-3 text-muted">L'IA est l'arme à double tranchant de la décennie[cite: 3]. D'un côté, elle génère des malwares mutants et des <span class="popover-term" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Deepfakes" data-bs-content="Falsifications vidéo ou vocales hyperréalistes générées par l'IA, utilisées pour contourner la biométrie ou tromper des victimes.">deepfakes</span> terrifiants[cite: 3].</p>
-                    <p class="text-muted">De l'autre, elle est indispensable pour analyser des millions d'événements par seconde et bloquer les cyberattaques[cite: 3].</p>
-                </div>
+            <p>L'IA a démocratisé la capacité de nuisance. Il n'est plus nécessaire d'être un développeur de génie pour créer un logiciel malveillant. Les pirates utilisent l'IA pour écrire des codes qui mutent (polymorphisme) à chaque exécution pour échapper aux antivirus.</p>
+            <p>Mais la plus grande menace concerne l'ingénierie sociale. Les <span class="popover-term" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Deepfakes" data-bs-content="Falsifications vidéo ou vocales hyperréalistes générées par l'IA.">Deepfakes</span> permettent aujourd'hui de cloner la voix de votre patron à partir d'une simple vidéo YouTube de 30 secondes. Des escrocs utilisent ces clones vocaux pour appeler des employés au téléphone et leur ordonner de transférer des fonds en urgence. Face à cela, l'IA défensive est notre seul espoir : seuls des algorithmes peuvent analyser les comportements à la nanoseconde pour détecter qu'une voix de synthèse n'a pas les micro-respirations d'un être humain.</p>
+
+            <div class="clearfix mt-5 mb-4">
+                <i class="bi bi-person-bounding-box future-icon"></i>
+                <h2 class="fw-bold pt-2">Web3 et Identité Auto-Souveraine</h2>
             </div>
-            <div class="col-lg-4">
-                <div class="card card-sober h-100 shadow-sm p-4">
-                    <h3 class="h5 fw-bold"><i class="bi bi-box text-muted me-2"></i>Web3 & Identité</h3>
-                    <p class="mt-3 text-muted">Le Web3, reposant sur la <span class="popover-term" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Blockchain" data-bs-content="Technologie de stockage et de transmission d'informations, transparente, sécurisée, et fonctionnant sans organe central de contrôle.">blockchain</span>, promet de mettre fin à la centralisation des données[cite: 3].</p>
-                    <p class="text-muted">L'<strong>identité auto-souveraine</strong> permettrait à chaque utilisateur de détenir ses propres données dans un portefeuille sécurisé[cite: 3].</p>
-                </div>
-            </div>
+            <p>Le problème originel du web actuel (Web2) est centralisé : nous donnons nos données à Google ou Meta pour qu'ils gèrent notre identité. Si leurs serveurs sont piratés, nous sommes compromis.</p>
+            <p>Le concept d'<strong>Identité Auto-Souveraine (SSI)</strong>, souvent lié au Web3 et à la technologie Blockchain, inverse ce modèle. L'utilisateur détient ses propres informations dans un portefeuille cryptographique local. Grâce à des technologies révolutionnaires comme les <span class="popover-term" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Zero-Knowledge Proofs (ZKP)" data-bs-content="Preuves à divulgation nulle de connaissance. Un protocole cryptographique permettant de prouver mathématiquement qu'une affirmation est vraie (ex: 'J'ai plus de 18 ans') sans révéler l'information sous-jacente (sans donner sa date de naissance).">Zero-Knowledge Proofs</span>, vous pourrez prouver à un site web que vous êtes majeur sans jamais lui communiquer votre date de naissance. C'est l'espoir philosophique et technique d'un web où l'internaute reprend le contrôle absolu de sa vie privée.</p>
         </div>
     </main>
 
-    <footer class="bg-dark text-white text-center py-4 mt-auto">
-        <div class="container"><p class="mb-0 text-white-50">© 2026 - Projet d'information sur la sécurité des données.</p></div>
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container text-center"><p class="mb-0 text-white-50">© 2026 - DataSecur. Projet d'information.</p></div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Script to activate Popovers -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
