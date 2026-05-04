@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sécurité des Données - Protections</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
-        :root {
-            --sober-dark: #1a202c;
-            --sober-muted: #4a5568;
-            --sober-light: #f7fafc;
-        }
+        :root { --sober-dark: #1a202c; --sober-muted: #4a5568; --sober-light: #f7fafc; }
         body { background-color: var(--sober-light); color: var(--sober-dark); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
         .navbar { background-color: var(--sober-dark) !important; }
-        .card-sober {
-            border: none; border-top: 4px solid var(--sober-muted); background-color: white; transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card-sober:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important; }
+        
+        /* Editorial Styles */
+        .article-body { max-width: 850px; margin: 0 auto; }
+        .article-body p { font-size: 1.15rem; line-height: 1.8; color: #334155; margin-bottom: 1.5rem; }
+        .article-lead { font-size: 1.3rem !important; font-weight: 500; color: var(--sober-dark) !important; }
+        .highlight-box { background-color: white; border-radius: 8px; padding: 2rem; border-left: 4px solid #198754; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin: 2.5rem 0; }
+        .quote-block { border-left: 5px solid var(--sober-muted); background-color: white; padding: 2rem; margin: 2rem 0; font-style: italic; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
 
     <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">DataSecur</a>
+            <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-shield-lock-fill me-2"></i>DataSecur</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -39,65 +39,47 @@
     </nav>
 
     <header class="bg-dark text-white text-center py-5">
-        <div class="container py-3">
-            <h1 class="display-5 fw-bold">Ce qui protège nos données</h1>
-            <p class="lead text-white-50">Un arsenal technologique et juridique en constante évolution.</p>
+        <div class="container py-4">
+            <h1 class="display-4 fw-bold">L'arsenal défensif moderne</h1>
+            <p class="lead text-white-50 mt-3 mx-auto" style="max-width: 700px;">Découvrez les remparts invisibles qui protègent notre vie numérique, de la cryptographie mathématique aux législations mondiales.</p>
         </div>
     </header>
 
     <main class="container my-5 flex-grow-1">
-        <div class="row g-4 mb-5">
-            <div class="col-md-6">
-                <div class="card card-sober h-100 shadow-sm p-4">
-                    <h3 class="h5 fw-bold mb-4">Adoption des standards de sécurité</h3>
-                    
-                    <p class="mb-1 text-muted small fw-bold">Trafic Web chiffré (HTTPS)</p>
-                    <div class="progress mb-3" style="height: 20px;">
-                        <div class="progress-bar bg-dark" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
-                    </div>
+        <div class="article-body">
+            <p class="article-lead">Il est facile de céder au fatalisme face aux piratages retentissants. Pourtant, l'environnement numérique n'est pas une zone de non-droit. Des moyens intellectuels, technologiques et financiers colossaux sont déployés chaque seconde pour garantir l'intégrité de nos informations.</p>
+            
+            <h2 class="fw-bold mt-5 mb-4">1. Le bouclier mathématique : La Cryptographie</h2>
+            <p>La première ligne de défense est purement mathématique. Le web moderne repose sur la cryptographie asymétrique. Lorsque vous vous connectez à votre banque (le fameux cadenas "HTTPS" dans votre navigateur), vous n'envoyez pas votre mot de passe en clair. Votre ordinateur et le serveur de la banque s'échangent des clés mathématiques complexes (souvent basées sur le standard TLS/SSL).</p>
+            <p><strong>Le chiffrement de bout en bout (E2EE)</strong> pousse ce concept plus loin pour les messageries comme Signal ou WhatsApp. Le message est chiffré sur votre téléphone et ne peut être déchiffré que par le téléphone de votre destinataire. Même l'entreprise qui héberge les serveurs n'a pas la clé pour lire vos conversations.</p>
 
-                    <p class="mb-1 text-muted small fw-bold">Utilisation de l'Authentification Multifacteur (MFA)</p>
-                    <div class="progress mb-3" style="height: 20px;">
-                        <div class="progress-bar bg-secondary" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
-                    </div>
-                    <small class="text-muted fst-italic">Bien que crucial, le MFA reste sous-utilisé par le grand public.</small>
-                </div>
+            <div class="highlight-box">
+                <h4 class="fw-bold text-success"><i class="bi bi-key-fill me-2"></i>L'Authentification Multifacteur (MFA)</h4>
+                <p class="mb-0 fs-6 text-muted">Aujourd'hui, un mot de passe ne suffit plus. Le MFA repose sur un principe simple : prouver son identité en combinant ce que l'on <em>sait</em> (le mot de passe), ce que l'on <em>possède</em> (un téléphone pour recevoir un code, ou une clé physique USB), et ce que l'on <em>est</em> (la biométrie : empreinte digitale ou reconnaissance faciale). Si un pirate vole votre mot de passe, il sera bloqué par cette deuxième barrière.</p>
             </div>
 
-            <div class="col-md-6">
-                 <div class="card card-sober h-100 shadow-sm p-4">
-                        <h3 class="card-title h5 fw-bold">Technologies de pointe</h3>
-                        <ul class="text-muted mt-3 list-unstyled">
-                            <li class="mb-3"><i class="bi bi-key-fill me-2 text-dark"></i><strong>Chiffrement de bout en bout :</strong> Garantit que seules les personnes qui communiquent peuvent lire les messages.</li>
-                            <li class="mb-3"><i class="bi bi-lock-fill me-2 text-dark"></i><strong>Protocoles sécurisés :</strong> Le cadenas dans votre navigateur certifie que les échanges sont protégés.</li>
-                            <li><i class="bi bi-phone-vibrate me-2 text-dark"></i><strong>MFA :</strong> La sécurité moderne exige une preuve supplémentaire (SMS, biométrie).</li>
-                        </ul>
-                 </div>
-            </div>
-        </div>
+            <h2 class="fw-bold mt-5 mb-4">2. Le bouclier juridique : Le RGPD</h2>
+            <p>La technologie seule ne suffit pas si les entreprises qui stockent nos données les utilisent de manière abusive. Entré en vigueur en 2018, le Règlement Général sur la Protection des Données (RGPD) européen a bouleversé le web mondial.</p>
+            <p>Il a imposé le concept de <strong>Privacy by Design</strong> : la sécurité ne doit plus être une option ajoutée à la fin d'un projet, mais intégrée dès sa conception. Il a également offert de nouveaux droits fondamentaux aux internautes :</p>
+            <ul>
+                <li><p><strong>Le consentement explicite :</strong> Fini les cases pré-cochées. L'utilisateur doit accepter activement la collecte de ses données.</p></li>
+                <li><p><strong>Le droit à l'oubli :</strong> Vous pouvez exiger d'une entreprise qu'elle supprime définitivement toutes les traces numériques vous concernant.</p></li>
+                <li><p><strong>Le principe de minimisation :</strong> Un site e-commerce n'a pas le droit de vous demander votre date de naissance ou votre profession si cela n'est pas strictement nécessaire à la livraison de votre commande.</p></li>
+            </ul>
 
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="card card-sober h-100 shadow-sm">
-                    <div class="card-body p-4">
-                        <h3 class="card-title h5 fw-bold">Cadre légal et réglementaire</h3>
-                        <p class="mt-3 text-muted">La loi s'est adaptée pour contraindre les acteurs du web à la responsabilité, notamment avec le <strong>RGPD</strong> en Europe, qui impose le droit à l'oubli et des sanctions massives en cas de négligence.</p>
-                    </div>
-                </div>
+            <div class="quote-block">
+                Les sanctions du RGPD sont conçues pour être dissuasives, pouvant atteindre 20 millions d'euros ou 4% du chiffre d'affaires mondial annuel de l'entreprise. En 2021, Amazon a ainsi écopé d'une amende record de 746 millions d'euros en Europe.
             </div>
-            <div class="col-md-6">
-                <div class="card card-sober h-100 shadow-sm">
-                    <div class="card-body p-4">
-                        <h3 class="card-title h5 fw-bold">Mesures proactives</h3>
-                        <p class="mt-3 text-muted">Les entreprises investissent dans des <strong>Audits (ISO 27001)</strong> et des programmes de <strong>"Bug Bounty"</strong> pour rémunérer les hackers éthiques qui découvrent des failles avant les criminels.</p>
-                    </div>
-                </div>
-            </div>
+
+            <h2 class="fw-bold mt-5 mb-4">3. L'industrialisation de la sécurité (SecOps)</h2>
+            <p>Face à la professionnalisation des cybercriminels, la défense s'est industrialisée. Les grandes entreprises déploient aujourd'hui des centres opérationnels de sécurité (SOC) qui surveillent les réseaux 24/7 grâce à l'intelligence artificielle pour repérer les anomalies en temps réel.</p>
+            <p>Enfin, pour devancer les pirates, les géants de la Tech ont popularisé les <strong>programmes de "Bug Bounty"</strong>. Ils offrent des primes allant de quelques milliers à plusieurs millions de dollars aux chercheurs indépendants (hackers éthiques) qui parviennent à trouver des failles dans leurs systèmes et les signalent discrètement, permettant de les corriger avant qu'elles ne soient exploitées de manière malveillante.</p>
         </div>
     </main>
 
-    <!-- ... (Keep standard Footer) ... -->
-
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container text-center"><p class="mb-0 text-white-50">© 2026 - DataSecur. Projet d'information.</p></div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
