@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sécurité des Données - Contact</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root { --sober-dark: #1a202c; --sober-muted: #4a5568; --sober-light: #f7fafc; }
+        body { background-color: var(--sober-light); color: var(--sober-dark); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+        .navbar { background-color: var(--sober-dark) !important; }
+        .btn-sober { background-color: var(--sober-muted); color: white; border: none; transition: background-color 0.3s ease; }
+        .btn-sober:hover { background-color: var(--sober-dark); color: white; }
+    </style>
 </head>
-<body class="bg-light d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="index.html">DataSecur</a>
+            <a class="navbar-brand fw-bold" href="index.html">DataSecur</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -25,43 +32,45 @@
         </div>
     </nav>
 
-    <header class="bg-secondary text-white text-center py-5">
-        <div class="container">
+    <!-- Upgraded to unified bg-dark -->
+    <header class="bg-dark text-white text-center py-5">
+        <div class="container py-3">
             <h1 class="display-5 fw-bold">Une question ?</h1>
-            <p class="lead">N'hésitez pas à me contacter pour échanger sur le sujet de la sécurité des données.</p>
+            <p class="lead text-white-50">N'hésitez pas à me contacter pour échanger sur le sujet de la sécurité des données.</p>
         </div>
     </header>
 
     <main class="container my-5 flex-grow-1">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6">
-                <div class="card shadow-sm border-0">
+                <div class="card shadow-sm border-0 border-top border-4 border-secondary">
                     <div class="card-body p-5">
-                        <h2 class="text-center mb-4">Formulaire de contact</h2>
+                        <h2 class="text-center mb-4 fw-bold">Formulaire de contact</h2>
                         <p class="text-muted text-center mb-4">Pour m'envoyer un message, remplissez le formulaire ci-dessous. Cela ouvrira directement votre logiciel de messagerie par défaut.</p>
                         
                         <form action="mailto:delsinne9@gmail.com" method="post" enctype="text/plain">
                             <div class="mb-3">
-                                <label for="nom" class="form-label fw-bold">Votre nom</label>
-                                <input type="text" class="form-control" id="nom" name="Nom" required>
+                                <label for="nom" class="form-label fw-bold text-muted">Votre nom</label>
+                                <input type="text" class="form-control bg-light border-0" id="nom" name="Nom" required>
                             </div>
                             <div class="mb-3">
-                                <label for="sujet" class="form-label fw-bold">Sujet de votre message</label>
-                                <input type="text" class="form-control" id="sujet" name="Sujet" required>
+                                <label for="sujet" class="form-label fw-bold text-muted">Sujet de votre message</label>
+                                <input type="text" class="form-control bg-light border-0" id="sujet" name="Sujet" required>
                             </div>
                             <div class="mb-4">
-                                <label for="message" class="form-label fw-bold">Votre question ou remarque</label>
-                                <textarea class="form-control" id="message" name="Message" rows="5" required></textarea>
+                                <label for="message" class="form-label fw-bold text-muted">Votre question ou remarque</label>
+                                <textarea class="form-control bg-light border-0" id="message" name="Message" rows="5" required></textarea>
                             </div>
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-secondary btn-lg">Préparer l'e-mail</button>
+                                <!-- Upgraded Button -->
+                                <button type="submit" class="btn btn-sober btn-lg fw-bold">Préparer l'e-mail</button>
                             </div>
                         </form>
 
                         <hr class="my-4">
                         <p class="text-center text-muted small">
                             Si le formulaire ne fonctionne pas, vous pouvez écrire directement à l'adresse suivante :<br>
-                            <strong><a href="mailto:delsinne9@gmail.com" class="text-decoration-none text-secondary">delsinne9@gmail.com</a></strong>
+                            <strong><a href="mailto:delsinne9@gmail.com" class="text-decoration-none" style="color: var(--sober-muted);">delsinne9@gmail.com</a></strong>
                         </p>
                     </div>
                 </div>
@@ -70,7 +79,7 @@
     </main>
 
     <footer class="bg-dark text-white text-center py-4 mt-auto">
-        <div class="container"><p class="mb-0">© 2026 - Projet d'information sur la sécurité des données.</p></div>
+        <div class="container"><p class="mb-0 text-white-50">© 2026 - Projet d'information sur la sécurité des données.</p></div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
